@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+	font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+}
+.openBtn {
+	display: flex;
+	justify-content: left;
+}
+.openButton {
+	border: none;
+	border-radius: 5px;
+	background-color: #1c87c9;
+	color: white;
+	padding: 14px 20px;
+	cursor: pointer;
+	position: fixed;
+}
+.loginPopup {
+	position: relative;
+	text-align: center;
+}
+.formPopup {
+	display: none;
+	position: fixed;
+	left: 45%;
+	top: 40%;
+	transform: translate(-50%, 5%);
+	border: 3px solid #999999;
+	z-index: 9;
+}
+
+.books-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: var(--spacing-xl);
+	margin-top: var(--spacing-xl);
+}
+
+.book-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 20px;
+	gap: var(--spacing-lg);
+	padding: var(--spacing-lg);
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	box-shadow: var(--shadow);
+	line-height: 1.2;
+	margin: 1em;
+}

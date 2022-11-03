@@ -1,4 +1,7 @@
-function Book(title: string, author: string, pages: number, read: boolean) {
+"use strict";
+let myLibrary = [];
+
+function Book(title, author, pages, read) {
 	this.title = title;
 	this.author = author;
 	this.pages = pages;
@@ -7,10 +10,10 @@ function Book(title: string, author: string, pages: number, read: boolean) {
 		return `${this.title} by ${this.author}, ${this.pages} pages, ${
 			this.read ? "read" : "not read yet"
 		}`;
-		console.log(
-			`${this.title} by ${this.author}, ${this.pages} pages, ${
-				this.read ? "read" : "not read yet"
-			}`
-		);
 	};
+}
+
+function addBookToLibrary() {
+	console.log("this command was run");
+	
 }

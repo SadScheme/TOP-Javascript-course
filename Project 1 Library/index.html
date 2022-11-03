@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm bg-light">
+				<div>
+					<h1>Welcome to the Book Library</h1>
+				</div>
+			</nav>
+		</header>
+		<div class="text-center">
+			<button
+				class="btn btn-dark addBook"
+				type="button"
+				value="Submit"
+				onclick="openForm()"
+			>
+				+ Add a Book
+			</button>
+		</div>
+		<div class="loginPopup">
+			<div class="formPopup" id="popupForm">
+				<form class="formContainer" id="formSubmit">
+					<h2>Add details of the Book</h2>
+					<input
+						type="text"
+						id="Title"
+						placeholder="Title"
+						name="Title"
+						required
+					/>
+					<input
+						type="text"
+						id="author"
+						placeholder="Author"
+						name="author"
+						required
+					/>
+					<input
+						type="number"
+						id="pages"
+						placeholder="No. of Pages"
+						name="pages"
+						required
+					/>
+					<p>
+						Have you read the book?
+						<input class="checkbox" type="checkbox" id="isRead" />
+					</p>
+					<button type="submit" class="btn btn-dark bookSubmit">Submit</button>
+					<button
+						type="button"
+						class="btn btn-secondary close"
+						onclick="closeForm()"
+					>
+						Close
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div id="bookList" class="books-grid text-center"></div>
+		</div>
+		<script type="text/javascript" src="src/index.js"></script>
+	</body>
+</html>
